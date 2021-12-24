@@ -18,7 +18,7 @@
                 Home</a>
         </li>
         <li class="nav-item">
-            <a class="nav-link {{ $active === 'blog' ? 'active' : '' }}" href="/blog"><i
+            <a class="nav-link {{ $active === 'posts' ? 'active' : '' }}" href="/posts"><i
                     class="bi bi-blockquote-left"></i> Blogs</a>
         </li>
         <li class="nav-item dropdown">
@@ -28,11 +28,6 @@
             </a>
             <ul class="dropdown-menu" aria-labelledby="category">
                 <li><a class="dropdown-item" href="#">Action</a></li>
-                <li><a class="dropdown-item" href="#">Another action</a></li>
-                <li>
-                    <hr class="dropdown-divider">
-                </li>
-                <li><a class="dropdown-item" href="#">Something else here</a></li>
             </ul>
         </li>
     </ul>
