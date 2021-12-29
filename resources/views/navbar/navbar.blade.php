@@ -1,7 +1,8 @@
-<nav class="navbar navbar-expand-lg navbar-light bg-white">
-    <div class="container-fluid">
+<nav class="navbar navbar-expand-lg navbar-light bg-white {{ $active === 'single' ? 'fixed-top' : '' }}">
+    <div class="{{ $active === 'single' ? 'container' : 'container-fluid' }}">
         @include('navbar.offcanvas')
-        <a class="navbar-brand d-flex align-items-center ms-2 me-md-auto" href="#">
+        <a class="navbar-brand d-flex align-items-center {{ $active === 'posts' ? 'm-auto' : 'ms-2 me-md-auto' }} "
+            href="/">
             <img src="Assets/logo.svg" alt="blogs logo" width="40" class="d-inline-block align-text-top">
             <span class="my-logo ms-2">IDK</span>
         </a>
@@ -21,21 +22,21 @@
                         id="category" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                         <i class="bi bi-x-diamond-fill"></i> Category
                     </a>
-                    <ul class="dropdown-menu" aria-labelledby="category">
-                        <li><a class="dropdown-item" href="#">Action</a></li>
+                    <ul class="dropdown-menu" id="navbarCategory" aria-labelledby="category">
                     </ul>
                 </li>
             </ul>
         </div>
-        <form class="d-none d-sm-flex" action="/posts">
+        <form class="d-none {{ $active === 'posts' ? '' : 'd-sm-flex' }}" action="/posts" id="formNavbar1">
             <div class="input-group">
-                <input type="text" class="form-control" placeholder="Temukan postingan">
+                <input type="text" name="search" class="form-control" placeholder="Temukan postingan">
                 <button class="btn btn-idk px-4 py-2" type="submit" id="button-addon2"><i
                         class="bi bi-search"></i></button>
             </div>
         </form>
-        <button class="btn btn-idk px-4 py-2 d-flex d-sm-none" type="button" data-bs-toggle="offcanvas"
-            data-bs-target="#offcanvasTop" aria-controls="offcanvasTop"><i class="bi bi-search"></i>
+        <button class="btn btn-idk px-4 py-2 {{ $active === 'posts' ? 'd-none' : 'd-flex d-sm-none' }}" type="button"
+            data-bs-toggle="offcanvas" data-bs-target="#offcanvasTop" aria-controls="offcanvasTop"><i
+                class="bi bi-search"></i>
         </button>
         <div class="offcanvas offcanvas-top" tabindex="-1" id="offcanvasTop" aria-labelledby="offcanvasTopLabel">
             <div class="offcanvas-header">
@@ -47,9 +48,9 @@
                     aria-label="Close"></button>
             </div>
             <div class="offcanvas-body">
-                <form class="d-flex" action="/posts">
+                <form class="d-flex" action="/posts" id="formNavbar2">
                     <div class="input-group">
-                        <input type="text" class="form-control" placeholder="Temukan postingan">
+                        <input type="text" name="search" class="form-control" placeholder="Temukan postingan">
                         <button class="btn btn-idk px-4 py-2" type="submit" id="button-addon2"><i
                                 class="bi bi-search"></i></button>
                     </div>
