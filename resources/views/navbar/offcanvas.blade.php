@@ -26,8 +26,7 @@
                 id="category" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                 <i class="bi bi-x-diamond-fill"></i> Category
             </a>
-            <ul class="dropdown-menu" aria-labelledby="category">
-                <li><a class="dropdown-item" href="#">Action</a></li>
+            <ul class="dropdown-menu" id="navbarCategory" aria-labelledby="category">
             </ul>
         </li>
     </ul>
