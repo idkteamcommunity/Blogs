@@ -1,7 +1,9 @@
 <?php
 
 use App\Http\Controllers\CategoryController;
+use App\Http\Controllers\MainController;
 use App\Http\Controllers\PostController;
+use App\Models\Category;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -22,6 +24,10 @@ Route::get('/', function () {
     ]);
 });
 
+Route::get('/get67902128data4829category', [MainController::class, 'index']);
+
 Route::get('/category', [CategoryController::class, 'index']);
 
 Route::get('/posts', [PostController::class, 'index']);
+
+Route::get('/{post:slug}', [PostController::class, 'show']);
