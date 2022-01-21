@@ -150,9 +150,9 @@ p.card-text {
     z-index: 10000;
 }
 h1.single {
-    font-weight: 600;
+    font-weight: 700;
     font-size: 2.125rem;
-    line-height: 36px;
+    line-height: 40px;
     letter-spacing: 0.02em;
     text-transform: capitalize;
     color: var(--bs-font-dark);
@@ -165,14 +165,33 @@ h4.related {
     color: var(--bs-font-dark);
 }
 
-.single-related .card {
+.my-card {
     /* border: none !important; */
     border-radius: 0px !important;
     margin-top: -1px;
 }
 .title-related .card-title {
-    font-weight: 500;
-    font-size: 18px;
-    line-height: 16px;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 18px;
     letter-spacing: 0.01em;
+    color: var(--bs-font-dark) !important;
+}
+.cursor svg {
+    cursor: pointer;
+}
+.share1 svg:hover circle.hover1,
+.share2 svg:hover circle.hover2,
+.share3 svg:hover circle.hover3,
+.share4 svg:hover circle.hover4 {
+    fill: rgba(126, 74, 239, 0.2);
+}
+
+h1.allpost {
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 30px;
+    letter-spacing: 0.02em;
+
+    color: #5f5370;
 }
