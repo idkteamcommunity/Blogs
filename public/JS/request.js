@@ -6,9 +6,11 @@ request.onload = function () {
         // Success!
         var data = JSON.parse(this.response);
 
+        // console.log(data);
+
         $.each(data, function (i, data) {
-            $("#navbarCategory").append(
-                `<li><a class="dropdown-item" href="/posts?kategori=` +
+            $("#navbarCategoryList").append(
+                `<li><a class="dropdown-item" href="/blog?kategori=` +
                     data.slug +
                     `">` +
                     data.name +
