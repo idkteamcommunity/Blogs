@@ -14,11 +14,12 @@
     </div>
     <ul class="navbar-nav px-4">
         <li class="nav-item">
-            <a class="nav-link {{ $active === 'home' ? 'active' : '' }}" href="/"><i class="bi bi-house-door-fill"></i>
+            <a class="nav-link {{ $active === 'home' ? 'active' : '' }}" href="/"><i
+                    class="bi bi-house-door-fill"></i>
                 Home</a>
         </li>
         <li class="nav-item">
-            <a class="nav-link {{ $active === 'posts' ? 'active' : '' }}" href="/posts"><i
+            <a class="nav-link {{ $active === 'posts' ? 'active' : '' }}" href="/blog"><i
                     class="bi bi-blockquote-left"></i> Blogs</a>
         </li>
         <li class="nav-item dropdown">

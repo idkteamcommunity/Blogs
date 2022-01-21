@@ -1,4 +1,4 @@
-<nav class="navbar navbar-expand-lg navbar-light bg-white {{ $active === 'single' ? 'fixed-top' : '' }}">
+<nav class="navbar navbar-expand-lg navbar-light bg-white {{ $active === 'single' ? 'fixed-top shadow-sm' : '' }}">
     <div class="{{ $active === 'single' ? 'container' : 'container-fluid' }}">
         @include('navbar.offcanvas')
         <a class="navbar-brand d-flex align-items-center {{ $active === 'posts' ? 'm-auto' : 'ms-2 me-md-auto' }} "
@@ -14,20 +14,20 @@
                         Home</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link {{ $active === 'posts' ? 'active' : '' }}" href="/posts"><i
-                            class="bi bi-blockquote-left"></i> Blogs</a>
+                    <a class="nav-link {{ ($active === 'posts' ? 'active' : $active === 'single') ? 'active' : '' }}"
+                        href="/blog"><i class="bi bi-blockquote-left"></i> Blogs</a>
                 </li>
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle {{ $active === 'category' ? 'active' : '' }}" href="/category"
                         id="category" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                         <i class="bi bi-x-diamond-fill"></i> Category
                     </a>
-                    <ul class="dropdown-menu" id="navbarCategory" aria-labelledby="category">
+                    <ul class="dropdown-menu" id="navbarCategoryList" aria-labelledby="category">
                     </ul>
                 </li>
             </ul>
         </div>
-        <form class="d-none {{ $active === 'posts' ? '' : 'd-sm-flex' }}" action="/posts" id="formNavbar1">
+        <form class="d-none {{ $active === 'posts' ? '' : 'd-sm-flex' }}" action="/blog" id="formNavbar1">
             <div class="input-group">
                 <input type="text" name="search" class="form-control" placeholder="Temukan postingan">
                 <button class="btn btn-idk px-4 py-2" type="submit" id="button-addon2"><i
@@ -48,7 +48,7 @@
                     aria-label="Close"></button>
             </div>
             <div class="offcanvas-body">
-                <form class="d-flex" action="/posts" id="formNavbar2">
+                <form class="d-flex" action="/blog" id="formNavbar2">
                     <div class="input-group">
                         <input type="text" name="search" class="form-control" placeholder="Temukan postingan">
                         <button class="btn btn-idk px-4 py-2" type="submit" id="button-addon2"><i
